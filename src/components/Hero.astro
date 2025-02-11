@@ -3,6 +3,7 @@ const personalImageAlt = 'Octavio'
 import Badge from '@/components/Badge.astro'
 import LinkedInIcon from '@/components/icons/LinkedIn.astro'
 import MailIcon from '@/components/icons/Mail.astro'
+import BriefcaseIcon from '@/components/icons/Briefcase.astro'
 import SocialPill from '@/components/SocialPill.astro'
 ---
 
@@ -14,7 +15,7 @@ import SocialPill from '@/components/SocialPill.astro'
       alt={personalImageAlt}
     />
     <a
-      href="https://www.linkedin.com/in/octavio-pereyra-bb1007213/"
+      href="https://www.linkedin.com/in/octaviopereyra19/"
       target="_blank"
       rel="noopener"
       class="flex items-center transition md:justify-center md:hover:scale-105"
@@ -30,16 +31,20 @@ import SocialPill from '@/components/SocialPill.astro'
   <p
     class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
   >
-    Estudiante de ingeniería en sistemas. <strong
+    Estudiante de ingeniería en sistemas. Técnico en informática profesional. <strong
       >Desarrollador de software full-stack</strong
     > de Rosario, Argentina. Especializado en el desarrollo de aplicaciones web únicas.
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="/OctavioPereyraCV.pdf" download="OctavioPereyraCV.pdf">
+      <BriefcaseIcon class="size-4" />
+      Descargar CV
+    </SocialPill>
     <SocialPill href="mailto:octaviopereyra19@gmail.com">
       <MailIcon class="size-4" />
       Contáctame
     </SocialPill>
-    <SocialPill href="https://www.linkedin.com/in/octavio-pereyra-bb1007213/">
+    <SocialPill href="https://www.linkedin.com/in/octaviopereyra19/">
       <LinkedInIcon class="size-4" />
       LinkedIn
     </SocialPill>

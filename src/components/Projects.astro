@@ -10,16 +10,19 @@ const TAGS = {
   ANGULAR: {
     name: 'Angular',
     class: 'bg-[#820060] text-white',
+    link: 'https://angular.dev',
     icon: Angular,
   },
   NODE: {
     name: 'NodeJS',
     class: 'bg-[#1A6717] text-white',
+    link: 'https://nodejs.org',
     icon: Node,
   },
   TAILWIND: {
     name: 'Tailwind CSS',
     class: 'bg-[#003159] text-white',
+    link: 'https://tailwindcss.com',
     icon: Tailwind,
   },
 }
@@ -51,7 +54,7 @@ const PROJECTS = [
         <div class="w-full md:w-1/2">
           <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
             <img
-              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              alt={'Preview de ' + title}
               class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
               loading="lazy"
               src={image}
@@ -67,12 +70,15 @@ const PROJECTS = [
             <ul class="flex flex-row mb-2 gap-x-2">
               {tags.map((tag) => (
                 <li>
-                  <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  <a
+                    href={tag.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 hover:cursor-pointer hover:bg-opacity-80 `}
                   >
                     <tag.icon class="size-4" />
                     {tag.name}
-                  </span>
+                  </a>
                 </li>
               ))}
             </ul>
