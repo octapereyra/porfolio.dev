@@ -6,16 +6,10 @@ import Sql from './icons/Sql.astro'
 import DotNet from './icons/DotNet.astro'
 import Vue from './icons/Vue.astro'
 import Laravel from './icons/Laravel.astro'
+import Mongo from './icons/Mongo.astro'
+import SkillCategory from './SkillCategory.astro'
 
-const SKILLS = [
-  {
-    lang: '.NET',
-    icon: DotNet,
-  },
-  {
-    lang: 'Laravel',
-    icon: Laravel,
-  },
+const FRONT = [
   {
     lang: 'Angular',
     icon: Angular,
@@ -25,29 +19,39 @@ const SKILLS = [
     icon: Vue,
   },
   {
-    lang: 'NodeJS',
-    icon: NodeJS,
-  },
-  {
     lang: 'Typescript',
     icon: Typescript,
   },
+]
+
+const BACK = [
+  {
+    lang: '.NET',
+    icon: DotNet,
+  },
+  {
+    lang: 'Laravel',
+    icon: Laravel,
+  },
+  {
+    lang: 'NodeJS',
+    icon: NodeJS,
+  },
+]
+const DATABASE = [
   {
     lang: 'MySQL',
     icon: Sql,
   },
+  {
+    lang: 'MongoDB',
+    icon: Mongo,
+  },
 ]
 ---
 
-<div
-  class="flex flex-row justify-between flex-wrap max-md:mx-10 max-md:justify-around items-center gap-8"
->
-  {
-    SKILLS.map((skill) => (
-      <div class="flex flex-col justify-center items-center gap-3 transition hover:scale-110">
-        <skill.icon class="w-9 h-12" />
-        <span class="text-base">{skill.lang}</span>
-      </div>
-    ))
-  }
+<div class="flex flex-row justify-between items-center gap-10">
+  <SkillCategory title="Frontend" skills={FRONT} />
+  <SkillCategory title="Backend" skills={BACK} />
+  <SkillCategory title="Databases" skills={DATABASE} />
 </div>

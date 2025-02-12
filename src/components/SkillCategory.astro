@@ -1,0 +1,19 @@
+---
+const { title, skills } = Astro.props
+---
+
+<div class="flex flex-col items-center gap-3">
+  <span class="text-2xl font-bold text-amber-300">{title}</span>
+  <div
+    class="flex flex-row justify-start flex-wrap max-md:mx-10 max-md:justify-around items-center gap-8"
+  >
+    {
+      skills.map((skill: { icon: any; lang: unknown }) => (
+        <div class="flex flex-col justify-center items-center gap-3 transition hover:scale-110">
+          <skill.icon class="w-9 h-12" />
+          <span class="text-base">{skill.lang}</span>
+        </div>
+      ))
+    }
+  </div>
+</div>
