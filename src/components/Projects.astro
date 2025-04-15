@@ -5,6 +5,8 @@ import Tailwind from './icons/Tailwind.astro'
 import Link from './icons/Link.astro'
 import LinkButton from './LinkButton.astro'
 import Node from './icons/NodeJS.astro'
+import Vue from './icons/Vue.astro'
+import Typescript from './icons/Typescript.astro'
 
 const TAGS = {
   ANGULAR: {
@@ -25,6 +27,18 @@ const TAGS = {
     link: 'https://tailwindcss.com',
     icon: Tailwind,
   },
+  VUE: {
+    name: 'VueJS',
+    class: 'bg-[#4FC08D] text-white',
+    link: 'https://vuejs.org',
+    icon: Vue,
+  },
+  TYPESCRIPT: {
+    name: 'TypeScript',
+    class: 'bg-[#007ACC] text-white',
+    link: 'https://www.typescriptlang.org/',
+    icon: Typescript,
+  },
 }
 const PROJECTS = [
   {
@@ -37,12 +51,13 @@ const PROJECTS = [
     tags: [TAGS.ANGULAR, TAGS.NODE, TAGS.TAILWIND],
   },
   {
-    title: 'Weather App',
+    title: 'Poke Social',
     description:
-      'Proyecto realizado en base a un challenge de front-end developer del sitio devchallenges.io, desarrollado con Angular 17 y consumiendo la API del servicio OpenWeatherMap',
-    link: 'https://weather-app-theta-wheat.vercel.app/',
-    image: '/projects/weather.webp',
-    tags: [TAGS.ANGULAR, TAGS.TAILWIND],
+      'Aplicación web realizada como challenge para un puesto de desarrollador frontend. Desarrollada con Vue js 3 y TypeScript, utilizando la API de PokeAPI para obtener información de los Pokémon.',
+    github: 'https://github.com/octapereyra/poke-social',
+    link: 'https://poke-social.vercel.app/',
+    image: '/projects/pokesocial.webp',
+    tags: [TAGS.VUE, TAGS.TYPESCRIPT],
   },
 ]
 ---
